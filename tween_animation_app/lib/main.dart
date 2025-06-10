@@ -9,37 +9,28 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
-    return Scaffold(
-      body: Column(
-        children: [
-          Text('data')
-=======
     return MaterialApp(
-      home: Home(),
+      home:TweenScreen() ,
     );
   }
 }
-class Home extends StatefulWidget {
-  const Home({super.key});
+class TweenScreen extends StatefulWidget {
+  const TweenScreen({super.key});
 
   @override
-  State<Home> createState() => _HomeState();
+  State<TweenScreen> createState() => _TweenScreenState();
 }
 
-class _HomeState extends State<Home> {
+class _TweenScreenState extends State<TweenScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Column(
-        children: [
-          ElevatedButton(onPressed: () {
-            print("object");
-          }, child: Text("click"))
->>>>>>> 210653bc99fc49c617f77fa16cb6003e57ddf103
-        ],
-      ),
+    return SafeArea(child: Scaffold(
+      appBar: AppBar(title: Text("Tween Animation",),backgroundColor: Colors.orange,),
+      body: Column(children: [
+        
+      ],),
+    ),
     );
+
   }
 }
-
